@@ -717,6 +717,10 @@ body:after {
   font-family: 'LithosProRegular';
   src: url("../fonts/lithospro-regular.eot");
   src: url("../fonts/lithospro-regular.eot") format("embedded-opentype"), url("../fonts/lithospro-regular.woff") format("woff"), url("../fonts/lithospro-regular.ttf") format("truetype"), url("../fonts/lithospro-regular.svg#LithosProRegular") format("svg"); }
+  @font-face {
+  font-family: 'refsan';
+  src: url("../fonts/refsan.eot");
+  src: url("../fonts/refsan.eot") format("embedded-opentype"), url("../fonts/refsan.woff") format("woff"), url("../fonts/refsan.ttf") format("truetype"); }
 .nav-item::before,
 .nav-item::after  {
   font-family: "ComicBookRegular";
