@@ -4,79 +4,58 @@
 <meta charset="UTF-8">
 <title>Cultura Afro-Brasileira</title>
 
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+<style>.edgeLoad-EDGE-26421795 { visibility:hidden; }</style>
+
+<!-- Edge -->
+<script src="js/vendor/edge/edge.5.0.1.min.js"></script>
+
 <script>
-	var canvas, stage, exportRoot;
-
-	function init() {
-		canvas = document.getElementById("canvas");
-		images = images||{};
-
-		var manifest = [
-			{src:"imagens/pag08/Bitmap1.png", id:"Bitmap1"},
-			{src:"imagens/pag08/Bitmap10.png", id:"Bitmap10"},
-			{src:"imagens/pag08/Bitmap11.png", id:"Bitmap11"},
-			{src:"imagens/pag08/Bitmap12.png", id:"Bitmap12"},
-			{src:"imagens/pag08/Bitmap13.png", id:"Bitmap13"},
-			{src:"imagens/pag08/Bitmap2.png", id:"Bitmap2"},
-			{src:"imagens/pag08/Bitmap3.png", id:"Bitmap3"},
-			{src:"imagens/pag08/Bitmap4.png", id:"Bitmap4"},
-			{src:"imagens/pag08/Bitmap5.png", id:"Bitmap5"},
-			{src:"imagens/pag08/Bitmap6.png", id:"Bitmap6"},
-			{src:"imagens/pag08/Bitmap7.png", id:"Bitmap7"},
-			{src:"imagens/pag08/Bitmap8.png", id:"Bitmap8"},
-			{src:"imagens/pag08/Bitmap9.png", id:"Bitmap9"},
-			{src:"imagens/pag08/CampanhaantiracismoImagemDivulgaçãoCNE.png", id:"CampanhaantiracismoImagemDivulgaçãoCNE"},
-			{src:"imagens/pag08/CampanhaantiracismoImagemDivulgaçãoCNE_1.png", id:"CampanhaantiracismoImagemDivulgaçãoCNE_1"},
-			{src:"imagens/pag08/CapadasDiretrizesCurricularesparaensinodeculturaafrobrasileiraeafricanaFotoDivulgaçãoMEC.png", id:"CapadasDiretrizesCurricularesparaensinodeculturaafrobrasileiraeafricanaFotoDivulgaçãoMEC"},
-			{src:"imagens/pag08/ConselhoNacionaldeEducação.png", id:"ConselhoNacionaldeEducação"},
-			{src:"imagens/pag08/ConselhoNacionaldeEducaçãopngcopy.jpg", id:"ConselhoNacionaldeEducaçãopngcopy"},
-			{src:"imagens/pag08/DançatípicaafricanaemescolapúblicaSefazimportanteoensinopráticodeculturaafronasescolasFotoDivulgaçãoCNE.jpg", id:"DançatípicaafricanaemescolapúblicaSefazimportanteoensinopráticodeculturaafronasescolasFotoDivulgaçãoCNE"},
-			{src:"imagens/pag08/DivulgaçãodoensinodeCulturaAfronasescolasLei10639Cartazdivulgação.jpg", id:"DivulgaçãodoensinodeCulturaAfronasescolasLei10639Cartazdivulgação"},
-			{src:"imagens/pag08/DivulgaçãodoensinodeCulturaAfronasescolasLei10639Cartazdivulgação_1.png", id:"DivulgaçãodoensinodeCulturaAfronasescolasLei10639Cartazdivulgação_1"}
-		];
-
-		var loader = new createjs.LoadQueue(false);
-		loader.addEventListener("fileload", handleFileLoad);
-		loader.addEventListener("complete", handleComplete);
-		loader.loadManifest(manifest);
-	}
-
-	function handleFileLoad(evt) {
-		if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
-	}
-
-	function handleComplete() {
-		exportRoot = new lib.botao8HTML();
-
-		stage = new createjs.Stage(canvas);
-		stage.addChild(exportRoot);
-		stage.update();
-		stage.enableMouseOver();
-
-		createjs.Ticker.setFPS(24);
-		createjs.Ticker.addEventListener("tick", stage);
-	}
+   AdobeEdge.loadComposition('js/pag08/pag08', 'EDGE-26421795', {
+    scaleToFit: "none",
+    centerStage: "none",
+    minW: "0",
+    maxW: "undefined",
+    width: "974px",
+    height: "640px"
+}, {dom: [ ]}, {dom: [ ]});
 </script>
 
 </head>
 
-<body style="background-color:#D4D4D4">
-	<canvas id="canvas" width="974" height="640" style="background-color:#ffffff"></canvas>
-
-	<!-- Flash -->
-	<script>init();</script>
+<body style="margin:0;padding:0;">
+	<div id="Stage" class="EDGE-26421795"></div>
 
 	<!-- Lightbox -->
 	<div class="lightbox">
-		<!-- Pag08/01 -->
-		<a class="fancybox-button" id="page08_01_01" rel="fancybox-button" href="imagens/pag08/lightbox/pag01/pag08_01_01.jpg" title="Capa das Diretrizes Curriculares para ensino de cultura afro-brasileira e africana (Foto: Divulgação, MEC)">
+		<!-- Pag03/01 -->
+		<a class="fancybox-button" id="page03_01_01" rel="fancybox-button" href="imagens/pag03/lightbox/pag01/pag03_01_01.jpg" title="Desembarque de escravos no Cais do Valongo (Imagem: Reprodução, Rugendas, acervo)">
 		</a>
 
-		<a class="fancybox-button" id="page08_01_02" rel="fancybox-button" href="imagens/pag08/lightbox/pag01/pag08_01_02.jpg" title="Campanha anti-racismo (Imagem: Divulgação, CNE)">
+		<a class="fancybox-button" id="page03_01_02" rel="fancybox-button" href="imagens/pag03/lightbox/pag01/pag03_01_02.jpg" title="Anchieta e Nóbrega na cabana de Pindobuçu: Catequização dos indios (Imagem: Reprodução, Benedito Calixto, óleo sobre tela)">
 		</a>
 
-		<!-- Pag08/02 -->
-		<a class="fancybox-button" id="page08_02_01" rel="fancybox-button" href="imagens/pag08/lightbox/pag02/pag08_02_01.jpg" title="Dança típica africana em escola pública - Se faz importante o ensino prático de cultura afro nas escolas (Foto, Divulgação, CNE)">
+		<!-- Pag03/02 -->
+		<a class="fancybox-button" id="page03_02_01" rel="fancybox-button" href="imagens/pag03/lightbox/pag02/pag03_02_01.jpg" title="Capa do livro 'Uma história do negro no brasil' (Foto: Divulgação)">
+		</a>
+
+		<a class="fancybox-button" id="page03_02_02" rel="fancybox-button" href="imagens/pag03/lightbox/pag02/pag03_02_02.jpg" title="Ilustração do tráfico negreiro partindo de regiões específicas da África até regiões específicas do Brasil (Imagem: Reprodução, Thiago Canuto, Mídias Educaticvas)">
+		</a>
+
+		<!-- Pag03/03 -->
+		<a class="fancybox-button" id="page03_03_01" rel="fancybox-button" href="imagens/pag03/lightbox/pag03/pag03_03_01.jpg" title="A revolta escrava do Haiti, em 1790, culminou na Revolta Haitiana e na independência do país (Imagem: Reprodução)">
+		</a>
+
+		<!-- Pag03/04 -->
+		<a class="fancybox-button" id="page03_04_01" rel="fancybox-button" href="imagens/pag03/lightbox/pag04/pag03_04_01.jpg" title="Comunidade Quilombola (Imagem: Reprodução)">
+		</a>
+
+		<!-- Pag03/05 -->
+		<a class="fancybox-button" id="page03_05_01" rel="fancybox-button" href="imagens/pag03/lightbox/pag05/pag03_05_01.jpg" title="Zumbi foi o último dos líderes do Quilombo dos Palmares, o maior dos quilombos do período colonial (Imagem: Reprodução)">
+
+		<a class="fancybox-button" id="page03_05_02" rel="fancybox-button" href="imagens/pag03/lightbox/pag05/pag03_05_02.jpg" title="Revolta dos malês, mobilizada por escravos de origem islâmica (Imagem: Reprodução)">
 		</a>
 	</div>
 </body>
