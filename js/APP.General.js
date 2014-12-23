@@ -17,6 +17,8 @@ APP.General = {
   },
 
   request: function(href) {
+    var that = this;
+
     $.ajax({
       url: href,
 
@@ -26,8 +28,9 @@ APP.General = {
         
         // Insert dynamic script with page in request;
         href = href.replace('.html', '');
-        APP.General.insertScript(href);
-        APP.General.removeScript(href);
+        // that.insertFirstScript(href);
+        // that.insertSecondScript(href);
+        // that.removeFirstScript(href);
       },
 
       success: function(href) {
@@ -41,22 +44,40 @@ APP.General = {
   },
 
   // Insert dynamic script with page in request;
-  insertScript: function(page) {
+  insertFirstScript: function(page) {
     var script, content;
 
     script = document.createElement('script');
     script.type = 'text/javascript';
     script.id = 'script-' + page;
-    script.src = 'js/flash/'+page+'.js';
+    script.src = 'js/'+page+'/' + page + '_edgeActions.js';
+
+    content = document.querySelector('#content');
+    content.parentNode.insertBefore(script, content);
+  },
+
+  insertSecondScript: function(page) {
+    var script, content;
+
+    script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.id = 'script-0' + page;
+    script.src = 'js/'+page+'/' + page + '_edge.js';
 
     content = document.querySelector('#content');
     content.parentNode.insertBefore(script, content);
   },
 
   // Remove script after init;
-  removeScript: function(page) {
+  removeFirstScript: function(page) {
     var script, value;
 
     script = $('#script-'+page)[0].remove();
+  },
+
+  removeSecondScript: function(page) {
+    var script, value;
+
+    script = $('#script-0'+page)[0].remove();
   }
 }

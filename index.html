@@ -8,65 +8,9 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/jquery.fancybox.css">
 
-<!-- Flash -->
-<script src="js/vendor/flash/easeljs-0.6.0.min.js"></script>
-<script src="js/vendor/flash/tweenjs-0.4.0.min.js"></script>
-<script src="js/vendor/flash/movieclip-0.6.0.min.js"></script>
-<script src="js/vendor/flash/preloadjs-0.3.0.min.js"></script>
-<script src="js/flash/index.js"></script>
-
-<script>
-var canvas, stage, exportRoot;
-
-function init() {
-	canvas = document.getElementById("canvas");
-	images = images||{};
-
-	var manifest = [
-		{src:"imagens/index/_0e42a979bf6ab46f6a34054ec794b068.png", id:"_0e42a979bf6ab46f6a34054ec794b068"},
-		{src:"imagens/index/b15fe5802643458e96cec36437eaba30jpgcopy.jpg", id:"b15fe5802643458e96cec36437eaba30jpgcopy"},
-		{src:"imagens/index/Bitmap1.png", id:"Bitmap1"},
-		{src:"imagens/index/Bitmap2.png", id:"Bitmap2"},
-		{src:"imagens/index/BrasilmaisnegroCenso2010ImagemDivulgaçãoIBGE.jpg", id:"BrasilmaisnegroCenso2010ImagemDivulgaçãoIBGE"},
-		{src:"imagens/index/colonizacao_indios.jpg", id:"colonizacao_indios"},
-		{src:"imagens/index/dançaprehpinturarupestrecotidiano.jpg", id:"dançaprehpinturarupestrecotidiano"},
-		{src:"imagens/index/dançaprehpinturarupestrecotidianoPB.jpg", id:"dançaprehpinturarupestrecotidianoPB"},
-		{src:"imagens/index/DançatípicaafricanaemescolapúblicaSefazimportanteoensinopráticodeculturaafronasescolasFotoDivulgaçãoCNE.jpg", id:"DançatípicaafricanaemescolapúblicaSefazimportanteoensinopráticodeculturaafronasescolasFotoDivulgaçãoCNE"},
-		{src:"imagens/index/DesembarquedeescravosnoCaisdoValongoFontepintadoporRugendasem1835.png", id:"DesembarquedeescravosnoCaisdoValongoFontepintadoporRugendasem1835"},
-		{src:"imagens/index/Detalhe_quadro_Auguste_François_Biard_A_abolição_da_escravatura_unilabedu.png", id:"Detalhe_quadro_Auguste_François_Biard_A_abolição_da_escravatura_unilabedu"},
-		{src:"imagens/index/dilma_sanciona_lei_portalmecgov.png", id:"dilma_sanciona_lei_portalmecgov"},
-		{src:"imagens/index/fotodeabdias_do_nascimento.png", id:"fotodeabdias_do_nascimento"},
-		{src:"imagens/index/GilbertoFreyre.png", id:"GilbertoFreyre"},
-		{src:"imagens/index/Homo_habiliswikipedia.png", id:"Homo_habiliswikipedia"},
-		{src:"imagens/index/IIMarchaNacionalContraoGenocídiodoPovoNegrolevou.png", id:"IIMarchaNacionalContraoGenocídiodoPovoNegrolevou"},
-		{src:"imagens/index/ManifestaçãoafavordascotasraciaisemGoiania23082014FotoWildesBarbosaOPopular.png", id:"ManifestaçãoafavordascotasraciaisemGoiania23082014FotoWildesBarbosaOPopular"},
-		{src:"imagens/index/MuitosnegrosmorriamduranteaviagemdepercursoentreÁfricaeAméricaFonteJMRogendaLicografia.png", id:"MuitosnegrosmorriamduranteaviagemdepercursoentreÁfricaeAméricaFonteJMRogendaLicografia"}
-	];
-
-	var loader = new createjs.LoadQueue(false);
-	loader.addEventListener("fileload", handleFileLoad);
-	loader.addEventListener("complete", handleComplete);
-	loader.loadManifest(manifest);
-}
-
-function handleFileLoad(evt) {
-	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
-}
-
-function handleComplete() {
-	exportRoot = new lib.telaInicialHTML();
-
-	stage = new createjs.Stage(canvas);
-	stage.addChild(exportRoot);
-	stage.update();
-
-	createjs.Ticker.setFPS(24);
-	createjs.Ticker.addEventListener("tick", stage);
-}
-</script>
 </head>
 
-<body onload="init();" style="background-color:#D4D4D4">
+<body style="background-color:#D4D4D4">
 	<main class="main" id="main">
 		<div class="ribbon">
 			<div class="ribbon-base">
@@ -90,7 +34,7 @@ function handleComplete() {
 				<li class="nav-item" data-start="5.5 milhoes ap">
 					<a href="pag01.html" id="link01" class="nav-link">
 						<figure class="img-link">
-							<img src="imagens/pag01/btn.png" height="99" width="90" alt="">
+							<img src="images/pag01/btn.png" height="99" width="90" alt="">
 							<figcaption>Inicio da Humanização</figcaption>
 						</figure>
 					</a>
@@ -103,7 +47,7 @@ function handleComplete() {
 				<li class="nav-item" data-start="1.501">
 					<a href="pag02.html" id="link02" class="nav-link">
 						<figure class="img-link">
-							<img src="imagens/pag02/btn.png" height="99" width="90" alt="">
+							<img src="images/pag02/btn.png" height="99" width="90" alt="">
 							<figcaption>Migração Forçada</figcaption>
 						</figure>
 					</a>
@@ -116,7 +60,7 @@ function handleComplete() {
 				<li class="nav-item" data-start="1.533">
 					<a href="pag03.html" id="link03" class="nav-link">
 						<figure class="img-link">
-							<img src="imagens/pag03/btn.png" height="99" width="90" alt="">
+							<img src="images/pag03/btn.png" height="99" width="90" alt="">
 							<figcaption>Escravatura no Brasil</figcaption>
 						</figure>
 					</a>
@@ -129,7 +73,7 @@ function handleComplete() {
 				<li class="nav-item" data-start="1.888">
 					<a href="pag04.html" id="link04" class="nav-link">
 						<figure class="img-link">
-							<img src="imagens/pag04/btn.png" height="99" width="90" alt="">
+							<img src="images/pag04/btn.png" height="99" width="90" alt="">
 							<figcaption>Abolição da escravatura</figcaption>
 						</figure>
 					</a>
@@ -142,7 +86,7 @@ function handleComplete() {
 				<li class="nav-item" data-start="1.933">
 					<a href="pag05.html" id="link05" class="nav-link">
 						<figure class="img-link">
-							<img src="imagens/pag05/btn.png" height="99" width="90" alt="">
+							<img src="images/pag05/btn.png" height="99" width="90" alt="">
 							<figcaption>Democracia Racial</figcaption>
 						</figure>
 					</a>
@@ -155,7 +99,7 @@ function handleComplete() {
 				<li class="nav-item" data-start="1.955">
 					<a href="pag06.html" id="link06" class="nav-link">
 						<figure class="img-link">
-							<img src="imagens/pag06/btn.png" height="99" width="90" alt="">
+							<img src="images/pag06/btn.png" height="99" width="90" alt="">
 							<figcaption>O mito da democracia racial</figcaption>
 						</figure>
 					</a>
@@ -168,7 +112,7 @@ function handleComplete() {
 				<li class="nav-item" data-start="1.978">
 					<a href="pag07.html" id="link07" class="nav-link">
 						<figure class="img-link">
-							<img src="imagens/pag07/btn.png" height="99" width="90" alt="">
+							<img src="images/pag07/btn.png" height="99" width="90" alt="">
 							<figcaption>Movimento negro e mucdr</figcaption>
 						</figure>
 					</a>
@@ -181,7 +125,7 @@ function handleComplete() {
 				<li class="nav-item" data-start="2.003">
 					<a href="pag08.html" id="link08" class="nav-link">
 						<figure class="img-link">
-							<img src="imagens/pag08/btn.png" height="96" width="89" alt="">
+							<img src="images/pag08/btn.png" height="96" width="89" alt="">
 							<figcaption>Lei de ensino da áfrica</figcaption>
 						</figure>
 					</a>
@@ -194,7 +138,7 @@ function handleComplete() {
 				<li class="nav-item" data-start="2.010">
 					<a href="pag09.html" id="link09" class="nav-link">
 						<figure class="img-link">
-							<img src="imagens/pag09/btn.png" height="96" width="89" alt="">
+							<img src="images/pag09/btn.png" height="96" width="89" alt="">
 							<figcaption>Brasil mais negro</figcaption>
 						</figure>
 					</a>
@@ -207,7 +151,7 @@ function handleComplete() {
 				<li class="nav-item" data-start="2.012">
 					<a href="pag10.html" id="link10" class="nav-link">
 						<figure class="img-link">
-							<img src="imagens/pag10/btn.png" height="96" width="89" alt="">
+							<img src="images/pag10/btn.png" height="96" width="89" alt="">
 							<figcaption>Cotas Raciais</figcaption>
 						</figure>
 					</a>
