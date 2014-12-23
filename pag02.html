@@ -4,63 +4,30 @@
 <meta charset="UTF-8">
 <title>Cultura Afro-Brasileira</title>
 
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jquery.fancybox.css">
+<style>.edgeLoad-EDGE-21495440 { visibility:hidden; }</style>
+
+<!-- Edge -->
+<script src="js/vendor/edge/edge.5.0.1.min.js"></script>
+
 <script>
-	var canvas, stage, exportRoot;
-
-	function init() {
-		canvas = document.getElementById("canvas");
-		images = images||{};
-
-		var manifest = [
-			{src:"imagens/pag02/ACoveredLitterExibiçãodeumreidoCongosendotransportadoemumaliteiraporseusescravosFonteDODapperGrafiteAmsterdam1686.png", id:"ACoveredLitterExibiçãodeumreidoCongosendotransportadoemumaliteiraporseusescravosFonteDODapperGrafiteAmsterdam1686"},
-			{src:"imagens/pag02/angola.png", id:"angola"},
-			{src:"imagens/pag02/benguela.png", id:"benguela"},
-			{src:"imagens/pag02/Bitmap1.png", id:"Bitmap1"},
-			{src:"imagens/pag02/Bitmap2.png", id:"Bitmap2"},
-			{src:"imagens/pag02/Bitmap3.png", id:"Bitmap3"},
-			{src:"imagens/pag02/Bitmap4.png", id:"Bitmap4"},
-			{src:"imagens/pag02/Bitmap5.png", id:"Bitmap5"},
-			{src:"imagens/pag02/Bitmap6.png", id:"Bitmap6"},
-			{src:"imagens/pag02/Bitmap7.png", id:"Bitmap7"},
-			{src:"imagens/pag02/Bitmap8.png", id:"Bitmap8"},
-			{src:"imagens/pag02/Bitmap9.png", id:"Bitmap9"},
-			{src:"imagens/pag02/congo.png", id:"congo"},
-			{src:"imagens/pag02/LavragemdeouroemItacolomiMinasGeraisFonteRugendaslitogravuraRevistadeHistória.png", id:"LavragemdeouroemItacolomiMinasGeraisFonteRugendaslitogravuraRevistadeHistória"},
-			{src:"imagens/pag02/monjolo.png", id:"monjolo"},
-			{src:"imagens/pag02/MuitosnegrosmorriamduranteaviagemdepercursoentreÁfricaeAméricaFonteJMRogendaLicografia.png", id:"MuitosnegrosmorriamduranteaviagemdepercursoentreÁfricaeAméricaFonteJMRogendaLicografia"},
-			{src:"imagens/pag02/PlantaçãodealgodãonaGeórgia1820FonteCassellsIllustratedHistoryofEnglandLondonCassellPetterandGalpin1863vol3p307.png", id:"PlantaçãodealgodãonaGeórgia1820FonteCassellsIllustratedHistoryofEnglandLondonCassellPetterandGalpin1863vol3p307"}
-		];
-
-		var loader = new createjs.LoadQueue(false);
-		loader.addEventListener("fileload", handleFileLoad);
-		loader.addEventListener("complete", handleComplete);
-		loader.loadManifest(manifest);
-	}
-
-	function handleFileLoad(evt) {
-		if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
-	}
-
-	function handleComplete() {
-		exportRoot = new lib.botao2NovoHTML();
-
-		stage = new createjs.Stage(canvas);
-		stage.addChild(exportRoot);
-		stage.update();
-		stage.enableMouseOver();
-
-		createjs.Ticker.setFPS(24);
-		createjs.Ticker.addEventListener("tick", stage);
-	}
+   AdobeEdge.loadComposition('js/pag02/pag02', 'EDGE-21495440', {
+    scaleToFit: "none",
+    centerStage: "none",
+    minW: "0",
+    maxW: "undefined",
+    width: "974px",
+    height: "640px"
+}, {dom: [ ]}, {dom: [ ]});
 </script>
 
 </head>
 
-<body style="background-color:#D4D4D4">
-	<canvas id="canvas" width="974" height="640" style="background-color:#ffffff"></canvas>
+<body style="margin:0;padding:0;">
+	<div id="Stage" class="EDGE-21495440"></div>
 
-	<!-- Flash -->
-	<script>init();</script>
 
 	<!-- Lightbox -->
 	<div class="lightbox">
