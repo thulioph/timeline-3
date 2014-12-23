@@ -37,7 +37,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "${imagem01_01_01}", "click", function(sym, e) {
          //Clique na imagem
          
-         parent.APP.FancyBox.openImage ("page01_01_01");
+         parent.APP.FancyBox.openImage ("pag01_01_01");
 
       });
       //Edge binding end
@@ -45,7 +45,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "${imagem01_01_02}", "click", function(sym, e) {
          //Clique na imagem
          
-         parent.APP.FancyBox.openImage ("page01_01_02");
+         parent.APP.FancyBox.openImage ("pag01_01_02");
          
 
       });
@@ -54,7 +54,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "${imagem01_01_03}", "click", function(sym, e) {
          //Clique na imagem
          
-         parent.APP.FancyBox.openImage ("page01_01_03");
+         parent.APP.FancyBox.openImage ("pag01_01_03");
          
 
       });
@@ -63,7 +63,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "${imagem01_02_06}", "click", function(sym, e) {
          //Clique na imagem
          
-         parent.APP.FancyBox.openImage ("page01_02_06");
+         parent.APP.FancyBox.openImage ("pag01_02_06");
          
 
       });
@@ -72,7 +72,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "${imagem01_02_05}", "click", function(sym, e) {
          //Clique na imagem
          
-         parent.APP.FancyBox.openImage ("page01_02_05");
+         parent.APP.FancyBox.openImage ("pag01_02_05");
          
          
 
@@ -82,7 +82,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "${imagem01_02_04}", "click", function(sym, e) {
          //Clique na imagem
          
-         parent.APP.FancyBox.openImage ("page01_02_04");
+         parent.APP.FancyBox.openImage ("pag01_02_04");
          
          
 
@@ -92,7 +92,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "${imagem01_02_03}", "click", function(sym, e) {
          //Clique na imagem
          
-         parent.APP.FancyBox.openImage ("page01_02_03");
+         parent.APP.FancyBox.openImage ("pag01_02_03");
          
          
 
@@ -102,7 +102,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "${imagem01_02_02}", "click", function(sym, e) {
          //Clique na imagem
          
-         parent.APP.FancyBox.openImage ("page01_02_02");
+         parent.APP.FancyBox.openImage ("pag01_02_02");
          
          
 
@@ -112,7 +112,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       Symbol.bindElementAction(compId, symbolName, "${imagem01_03_01}", "click", function(sym, e) {
          //Clique na imagem
          
-         parent.APP.FancyBox.openImage ("page01_03_01");
+         parent.APP.FancyBox.openImage ("pag01_03_01");
          
          
 
