@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cultura Afro-Brasileira</title>
+
+<script>
+	var canvas, stage, exportRoot;
+
+	function init() {
+		canvas = document.getElementById("canvas");
+		images = images||{};
+
+		var manifest = [
+			{src:"imagens/pag09/Bitmap1.png", id:"Bitmap1"},
+			{src:"imagens/pag09/Bitmap10.png", id:"Bitmap10"},
+			{src:"imagens/pag09/Bitmap11.png", id:"Bitmap11"},
+			{src:"imagens/pag09/Bitmap12.png", id:"Bitmap12"},
+			{src:"imagens/pag09/Bitmap13.png", id:"Bitmap13"},
+			{src:"imagens/pag09/Bitmap14.png", id:"Bitmap14"},
+			{src:"imagens/pag09/Bitmap15.png", id:"Bitmap15"},
+			{src:"imagens/pag09/Bitmap16.png", id:"Bitmap16"},
+			{src:"imagens/pag09/Bitmap17.png", id:"Bitmap17"},
+			{src:"imagens/pag09/Bitmap2.png", id:"Bitmap2"},
+			{src:"imagens/pag09/Bitmap3.png", id:"Bitmap3"},
+			{src:"imagens/pag09/Bitmap4.png", id:"Bitmap4"},
+			{src:"imagens/pag09/Bitmap5.png", id:"Bitmap5"},
+			{src:"imagens/pag09/Bitmap6.png", id:"Bitmap6"},
+			{src:"imagens/pag09/Bitmap7.png", id:"Bitmap7"},
+			{src:"imagens/pag09/Bitmap8.png", id:"Bitmap8"},
+			{src:"imagens/pag09/Bitmap9.png", id:"Bitmap9"},
+			{src:"imagens/pag09/BrancosganhamquaseodobrodenegrosepardosnoBrasilsegundoCENSOde2010ImagemDivulgaçãoIBGE.jpg", id:"BrancosganhamquaseodobrodenegrosepardosnoBrasilsegundoCENSOde2010ImagemDivulgaçãoIBGE"},
+			{src:"imagens/pag09/BrasilmaisnegroCenso2010ImagemDivulgaçãoIBGE.jpg", id:"BrasilmaisnegroCenso2010ImagemDivulgaçãoIBGE"},
+			{src:"imagens/pag09/CampanhaantiracismoImagemDivulgaçãoCNE.png", id:"CampanhaantiracismoImagemDivulgaçãoCNE"},
+			{src:"imagens/pag09/CampanhaantiracismoImagemDivulgaçãoCNE_1.png", id:"CampanhaantiracismoImagemDivulgaçãoCNE_1"},
+			{src:"imagens/pag09/CapadasDiretrizesCurricularesparaensinodeculturaafrobrasileiraeafricanaFotoDivulgaçãoMEC.png", id:"CapadasDiretrizesCurricularesparaensinodeculturaafrobrasileiraeafricanaFotoDivulgaçãoMEC"},
+			{src:"imagens/pag09/ConcentraçãodenegrosepardosporregiãosegundoCENSOde2010ImagemDivulgaçãoIBGE.png", id:"ConcentraçãodenegrosepardosporregiãosegundoCENSOde2010ImagemDivulgaçãoIBGE"},
+			{src:"imagens/pag09/ConcentraçãodenegrosepardosporregiãosegundoCENSOde2010ImagemDivulgaçãoIBGE2.png", id:"ConcentraçãodenegrosepardosporregiãosegundoCENSOde2010ImagemDivulgaçãoIBGE2"},
+			{src:"imagens/pag09/ConselhoNacionaldeEducação.png", id:"ConselhoNacionaldeEducação"},
+			{src:"imagens/pag09/ConselhoNacionaldeEducaçãopngcopy.jpg", id:"ConselhoNacionaldeEducaçãopngcopy"},
+			{src:"imagens/pag09/DançatípicaafricanaemescolapúblicaSefazimportanteoensinopráticodeculturaafronasescolasFotoDivulgaçãoCNE.jpg", id:"DançatípicaafricanaemescolapúblicaSefazimportanteoensinopráticodeculturaafronasescolasFotoDivulgaçãoCNE"},
+			{src:"imagens/pag09/DistribuiçãodapopulaçãobrasileirasegundocorouraçaImagemDistribuiçãoIBGE.jpg", id:"DistribuiçãodapopulaçãobrasileirasegundocorouraçaImagemDistribuiçãoIBGE"},
+			{src:"imagens/pag09/DivulgaçãodoensinodeCulturaAfronasescolasLei10639Cartazdivulgação.jpg", id:"DivulgaçãodoensinodeCulturaAfronasescolasLei10639Cartazdivulgação"},
+			{src:"imagens/pag09/DivulgaçãodoensinodeCulturaAfronasescolasLei10639Cartazdivulgação_1.png", id:"DivulgaçãodoensinodeCulturaAfronasescolasLei10639Cartazdivulgação_1"},
+			{src:"imagens/pag09/EscolaridadedosbrasileirosporcorouraçasegundoníveldeensinoImagemDivulgaçãoIBGE.jpg", id:"EscolaridadedosbrasileirosporcorouraçasegundoníveldeensinoImagemDivulgaçãoIBGE"},
+			{src:"imagens/pag09/Númerodedeputadosfederaiseleitosem2014ImagemDistribuiçãoIBGE.png", id:"Númerodedeputadosfederaiseleitosem2014ImagemDistribuiçãoIBGE"},
+			{src:"imagens/pag09/Populaçãobrasileiraporraçaem2010ImagemDivulgaçãoIBGE.png", id:"Populaçãobrasileiraporraçaem2010ImagemDivulgaçãoIBGE"}
+		];
+
+		var loader = new createjs.LoadQueue(false);
+		loader.addEventListener("fileload", handleFileLoad);
+		loader.addEventListener("complete", handleComplete);
+		loader.loadManifest(manifest);
+	}
+
+	function handleFileLoad(evt) {
+		if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+	}
+
+	function handleComplete() {
+		exportRoot = new lib.botao9HTML();
+
+		stage = new createjs.Stage(canvas);
+		stage.addChild(exportRoot);
+		stage.update();
+		stage.enableMouseOver();
+
+		createjs.Ticker.setFPS(24);
+		createjs.Ticker.addEventListener("tick", stage);
+	}
+</script>
+</head>
+
+<body style="background-color:#D4D4D4">
+	<canvas id="canvas" width="974" height="640" style="background-color:#ffffff"></canvas>
+
+	<!-- Flash -->
+	<script>init();</script>
+
+	<!-- Lightbox -->
+	<div class="lightbox">
+		<!-- Pag09/01 -->
+		<a class="fancybox-button" id="page09_01_01" rel="fancybox-button" href="imagens/pag09/lightbox/pag01/pag09_01_01.jpg" title="População brasileira por raça em 2010 (Imagem, Divulgação, IBGE)">
+		</a>
+
+		<a class="fancybox-button" id="page09_01_02" rel="fancybox-button" href="imagens/pag09/lightbox/pag01/pag09_01_02.jpg" title="Distribuição da população brasileira segundo cor ou raça (Imagem, Distribuição, IBGE)">
+		</a>
+
+		<!-- Pag09/02 -->
+		<a class="fancybox-button" id="page09_02_01" rel="fancybox-button" href="imagens/pag09/lightbox/pag02/pag09_02_01.jpg" title="Concentração de negros e pardos por região, segundo CENSO de 2010 (Imagem, Divulgação, IBGE)">
+		</a>
+
+		<a class="fancybox-button" id="page09_02_02" rel="fancybox-button" href="imagens/pag09/lightbox/pag02/pag09_02_02.jpg" title="Brancos ganham quase o dobro de negros e pardos no Brasil, segundo CENSO de 2010 (Imagem, Divulgação, IBGE)">
+		</a>
+
+		<!-- Pag09/03 -->
+		<a class="fancybox-button" id="page09_03_01" rel="fancybox-button" href="imagens/pag09/lightbox/pag03/pag09_03_01.jpg" title="Número de deputados federais eleitos em 2014 (Imagem, Distribuição, IBGE)">
+		</a>
+	</div>
+</body>
+</html>

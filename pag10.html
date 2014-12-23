@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cultura Afro-Brasileira</title>
+
+<script>
+	var canvas, stage, exportRoot;
+
+	function init() {
+		canvas = document.getElementById("canvas");
+		images = images||{};
+
+		var manifest = [
+			{src:"imagens/pag10/Bitmap1.png", id:"Bitmap1"},
+			{src:"imagens/pag10/Bitmap2.png", id:"Bitmap2"},
+			{src:"imagens/pag10/Bitmap3.png", id:"Bitmap3"},
+			{src:"imagens/pag10/Bitmap4.png", id:"Bitmap4"},
+			{src:"imagens/pag10/Bitmap5.png", id:"Bitmap5"},
+			{src:"imagens/pag10/Bitmap6.png", id:"Bitmap6"},
+			{src:"imagens/pag10/Bitmap7.png", id:"Bitmap7"},
+			{src:"imagens/pag10/Bitmap8.png", id:"Bitmap8"},
+			{src:"imagens/pag10/BrancosganhamquaseodobrodenegrosepardosnoBrasilsegundoCENSOde2010ImagemDivulgaçãoIBGE.jpg", id:"BrancosganhamquaseodobrodenegrosepardosnoBrasilsegundoCENSOde2010ImagemDivulgaçãoIBGE"},
+			{src:"imagens/pag10/BrasilmaisnegroCenso2010ImagemDivulgaçãoIBGE.jpg", id:"BrasilmaisnegroCenso2010ImagemDivulgaçãoIBGE"},
+			{src:"imagens/pag10/CampanhaantiracismoImagemDivulgaçãoCNE.png", id:"CampanhaantiracismoImagemDivulgaçãoCNE"},
+			{src:"imagens/pag10/CampanhaantiracismoImagemDivulgaçãoCNE_1.png", id:"CampanhaantiracismoImagemDivulgaçãoCNE_1"},
+			{src:"imagens/pag10/CapadasDiretrizesCurricularesparaensinodeculturaafrobrasileiraeafricanaFotoDivulgaçãoMEC.png", id:"CapadasDiretrizesCurricularesparaensinodeculturaafrobrasileiraeafricanaFotoDivulgaçãoMEC"},
+			{src:"imagens/pag10/ConcentraçãodenegrosepardosporregiãosegundoCENSOde2010ImagemDivulgaçãoIBGE.png", id:"ConcentraçãodenegrosepardosporregiãosegundoCENSOde2010ImagemDivulgaçãoIBGE"},
+			{src:"imagens/pag10/ConcentraçãodenegrosepardosporregiãosegundoCENSOde2010ImagemDivulgaçãoIBGE2.png", id:"ConcentraçãodenegrosepardosporregiãosegundoCENSOde2010ImagemDivulgaçãoIBGE2"},
+			{src:"imagens/pag10/ConselhoNacionaldeEducação.png", id:"ConselhoNacionaldeEducação"},
+			{src:"imagens/pag10/ConselhoNacionaldeEducaçãopngcopy.jpg", id:"ConselhoNacionaldeEducaçãopngcopy"},
+			{src:"imagens/pag10/DançatípicaafricanaemescolapúblicaSefazimportanteoensinopráticodeculturaafronasescolasFotoDivulgaçãoCNE.jpg", id:"DançatípicaafricanaemescolapúblicaSefazimportanteoensinopráticodeculturaafronasescolasFotoDivulgaçãoCNE"},
+			{src:"imagens/pag10/dilma_sanciona_lei_portalmecgov.png", id:"dilma_sanciona_lei_portalmecgov"},
+			{src:"imagens/pag10/dilma_sanciona_lei_portalmecgovbr.png", id:"dilma_sanciona_lei_portalmecgovbr"},
+			{src:"imagens/pag10/DistribuiçãodapopulaçãobrasileirasegundocorouraçaImagemDistribuiçãoIBGE.jpg", id:"DistribuiçãodapopulaçãobrasileirasegundocorouraçaImagemDistribuiçãoIBGE"},
+			{src:"imagens/pag10/DivulgaçãodoensinodeCulturaAfronasescolasLei10639Cartazdivulgação.jpg", id:"DivulgaçãodoensinodeCulturaAfronasescolasLei10639Cartazdivulgação"},
+			{src:"imagens/pag10/DivulgaçãodoensinodeCulturaAfronasescolasLei10639Cartazdivulgação_1.png", id:"DivulgaçãodoensinodeCulturaAfronasescolasLei10639Cartazdivulgação_1"},
+			{src:"imagens/pag10/EscolaridadedosbrasileirosporcorouraçasegundoníveldeensinoImagemDivulgaçãoIBGE.jpg", id:"EscolaridadedosbrasileirosporcorouraçasegundoníveldeensinoImagemDivulgaçãoIBGE"},
+			{src:"imagens/pag10/ManifestaçãoafavordascotasraciaisemGoiania23082014FotoWildesBarbosaOPopular.jpg", id:"ManifestaçãoafavordascotasraciaisemGoiania23082014FotoWildesBarbosaOPopular"},
+			{src:"imagens/pag10/ManifestaçãoafavordascotasraciaisemGoiania23082014FotoWildesBarbosaOPopular_1.png", id:"ManifestaçãoafavordascotasraciaisemGoiania23082014FotoWildesBarbosaOPopular_1"},
+			{src:"imagens/pag10/ManifestantescontrárioàscotasdefendemmelhoriasnaeducaçãoenaescolapúblicaemGoianiaFotoVersannaCarvalhoG1.jpg", id:"ManifestantescontrárioàscotasdefendemmelhoriasnaeducaçãoenaescolapúblicaemGoianiaFotoVersannaCarvalhoG1"},
+			{src:"imagens/pag10/ManifestantescontrárioàscotasdefendemmelhoriasnaeducaçãoenaescolapúblicaemGoianiaFotoVersannaCarvalhoG1_1.png", id:"ManifestantescontrárioàscotasdefendemmelhoriasnaeducaçãoenaescolapúblicaemGoianiaFotoVersannaCarvalhoG1_1"},
+			{src:"imagens/pag10/Númerodedeputadosfederaiseleitosem2014ImagemDistribuiçãoIBGE.png", id:"Númerodedeputadosfederaiseleitosem2014ImagemDistribuiçãoIBGE"},
+			{src:"imagens/pag10/PercentualdepessoasquesedeclararampretasoupardascresceumaiseminstituiçõesprivadasdoqueemuniversidadespúblicassengundoCENSO2010ImagemReproduçãoIBGE.png", id:"PercentualdepessoasquesedeclararampretasoupardascresceumaiseminstituiçõesprivadasdoqueemuniversidadespúblicassengundoCENSO2010ImagemReproduçãoIBGE"},
+			{src:"imagens/pag10/Populaçãobrasileiraporraçaem2010ImagemDivulgaçãoIBGE.png", id:"Populaçãobrasileiraporraçaem2010ImagemDivulgaçãoIBGE"},
+			{src:"imagens/pag10/UmadasqueixadosquesãocontráriosàscotasraciaiséquemuitosseaproveitamdasmesmasparaseclassificaremcomonegrosoupardossemoseremChargeReproduçãoWilliam.png", id:"UmadasqueixadosquesãocontráriosàscotasraciaiséquemuitosseaproveitamdasmesmasparaseclassificaremcomonegrosoupardossemoseremChargeReproduçãoWilliam"}
+		];
+
+		var loader = new createjs.LoadQueue(false);
+		loader.addEventListener("fileload", handleFileLoad);
+		loader.addEventListener("complete", handleComplete);
+		loader.loadManifest(manifest);
+	}
+
+	function handleFileLoad(evt) {
+		if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+	}
+
+	function handleComplete() {
+		exportRoot = new lib.botao10HTML();
+
+		stage = new createjs.Stage(canvas);
+		stage.addChild(exportRoot);
+		stage.update();
+		stage.enableMouseOver();
+
+		createjs.Ticker.setFPS(24);
+		createjs.Ticker.addEventListener("tick", stage);
+	}
+</script>
+
+</head>
+
+<body style="background-color:#D4D4D4">
+	<canvas id="canvas" width="974" height="640" style="background-color:#ffffff"></canvas>
+
+	<!-- Flash -->
+	<script>init();</script>
+
+	<!-- Lightbox -->
+	<div class="lightbox">
+		<!-- Pag10/01 -->
+		<a class="fancybox-button" id="page10_01_01" rel="fancybox-button" href="imagens/pag10/lightbox/pag01/pag10_01_01.jpg" title="No dia 29 de agosto de 2012 a Presidente Dilma Rousseff sancionou a lei que cria cotas nas universidade federais para estudantes da rede pública (Foto: Reprodução, Portal MEC)">
+		</a>
+
+		<a class="fancybox-button" id="page10_01_02" rel="fancybox-button" href="imagens/pag10/lightbox/pag01/pag10_01_02.jpg" title="Manifestação a favor das cotas raciais em Goiania 23-08-2014 (Foto: Wildes Barbosa, O Popular)">
+		</a>
+
+		<a class="fancybox-button" id="page10_01_03" rel="fancybox-button" href="imagens/pag10/lightbox/pag01/pag10_01_03.jpg" title="Manifestantes, contrário às cotas, defendem melhorias na educação e na escola pública em Goiania (Foto: Versanna Carvalho, G1)">
+		</a>
+
+		<!-- Pag09/02 -->
+		<a class="fancybox-button" id="page10_02_01" rel="fancybox-button" href="imagens/pag10/lightbox/pag02/pag10_02_01.jpg" title="Uma das queixa dos que são contrários às cotas raciais é que muitos se aproveitam das mesmas para se classificarem como negros ou pardos sem o ser (Charge: Reprodução, William)">
+		</a>
+	</div>
+</body>
+</html>

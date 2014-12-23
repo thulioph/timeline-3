@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cultura Afro-Brasileira</title>
+
+<script>
+	var canvas, stage, exportRoot;
+
+	function init() {
+		canvas = document.getElementById("canvas");
+		images = images||{};
+
+		var manifest = [
+			{src:"imagens/pag05/Bitmap1.png", id:"Bitmap1"},
+			{src:"imagens/pag05/Bitmap2.png", id:"Bitmap2"},
+			{src:"imagens/pag05/Bitmap3.png", id:"Bitmap3"},
+			{src:"imagens/pag05/Bitmap4.png", id:"Bitmap4"},
+			{src:"imagens/pag05/Bitmap5.png", id:"Bitmap5"},
+			{src:"imagens/pag05/Bitmap6.png", id:"Bitmap6"},
+			{src:"imagens/pag05/Capacasagrandeesenzala.png", id:"Capacasagrandeesenzala"},
+			{src:"imagens/pag05/EscolaparanegrodmantidapalaFNB.png", id:"EscolaparanegrodmantidapalaFNB"},
+			{src:"imagens/pag05/GilbertoFreyre.png", id:"GilbertoFreyre"},
+			{src:"imagens/pag05/Jornalavozdaraça.jpg", id:"Jornalavozdaraça"},
+			{src:"imagens/pag05/Soldados_e_Oficiais_da_Legião_Negrasocialistatrabalhistablogspotcom.png", id:"Soldados_e_Oficiais_da_Legião_Negrasocialistatrabalhistablogspotcom"}
+		];
+
+		var loader = new createjs.LoadQueue(false);
+		loader.addEventListener("fileload", handleFileLoad);
+		loader.addEventListener("complete", handleComplete);
+		loader.loadManifest(manifest);
+	}
+
+	function handleFileLoad(evt) {
+		if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+	}
+
+	function handleComplete() {
+		exportRoot = new lib.botao5NovoHTML();
+
+		stage = new createjs.Stage(canvas);
+		stage.addChild(exportRoot);
+		stage.update();
+		stage.enableMouseOver();
+
+		createjs.Ticker.setFPS(24);
+		createjs.Ticker.addEventListener("tick", stage);
+	}
+</script>
+
+</head>
+
+<body style="background-color:#D4D4D4">
+	<canvas id="canvas" width="974" height="640" style="background-color:#ffffff"></canvas>
+
+	<!-- Flash -->
+	<script>init();</script>
+
+	<!-- Lightbox -->
+	<div class="lightbox">
+		<!-- Pag05/01 -->
+		<a class="fancybox-button" id="page05_01_01" rel="fancybox-button" href="imagens/pag05/lightbox/pag01/pag05_01_01.jpg" title="Gilberto Freyre, conseguiu com 'Casa-grande & Senzala' superar o antigo modelo de racismo científico e o eugenismo propagado no Brasil, no início do século XX (Foto: Reprodução)">
+		</a>
+
+		<a class="fancybox-button" id="page05_01_02" rel="fancybox-button" href="imagens/pag05/lightbox/pag01/pag05_01_02.jpg" title="Capa da primeira edição de 'Casa-grande & Senzala' (Foto: Divulgação)">
+		</a>
+
+		<!-- Pag05/02 -->
+		<a class="fancybox-button" id="page05_02_01" rel="fancybox-button" href="imagens/pag05/lightbox/pag02/pag05_02_01.jpg" title="Escola para negros mantida pala Frente Negra Brasileira (FNB) (Foto: Divulgação)">
+		</a>
+
+		<a class="fancybox-button" id="page05_02_02" rel="fancybox-button" href="imagens/pag05/lightbox/pag02/pag05_02_02.jpg" title="Jornal 'A voz da raça'. Fundado em 1933, o jornal é tido como um dos mais importantes do gênero, sendo bastante lido também fora da comunidade negra. A Voz da Raça circulou até 1937, totalizando 70 edições (Foto: Divulgação)">
+		</a>
+
+		<!-- Pag05/03 -->
+		<a class="fancybox-button" id="page05_03_01" rel="fancybox-button" href="imagens/pag05/lightbox/pag03/pag05_03_01.jpg" title="Soldados e Oficiais da Legião Negra (Foto: Divulgação)">
+		</a>
+	</div>
+</body>
+</html>

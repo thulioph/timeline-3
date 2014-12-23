@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cultura Afro-Brasileira</title>
+
+<script>
+	var canvas, stage, exportRoot;
+
+	function init() {
+		canvas = document.getElementById("canvas");
+		images = images||{};
+
+		var manifest = [
+			{src:"imagens/pag06/a19img01wwwscielobr.png", id:"a19img01wwwscielobr"},
+			{src:"imagens/pag06/a19img02wwwscielobr.png", id:"a19img02wwwscielobr"},
+			{src:"imagens/pag06/a19img04wwwscielobr.png", id:"a19img04wwwscielobr"},
+			{src:"imagens/pag06/afonso_arinos2wwwitamaratygov.png", id:"afonso_arinos2wwwitamaratygov"},
+			{src:"imagens/pag06/Bitmap1.png", id:"Bitmap1"},
+			{src:"imagens/pag06/Bitmap10.png", id:"Bitmap10"},
+			{src:"imagens/pag06/Bitmap11.png", id:"Bitmap11"},
+			{src:"imagens/pag06/Bitmap12.png", id:"Bitmap12"},
+			{src:"imagens/pag06/Bitmap13.png", id:"Bitmap13"},
+			{src:"imagens/pag06/Bitmap14.png", id:"Bitmap14"},
+			{src:"imagens/pag06/Bitmap2.png", id:"Bitmap2"},
+			{src:"imagens/pag06/Bitmap3.png", id:"Bitmap3"},
+			{src:"imagens/pag06/Bitmap4.png", id:"Bitmap4"},
+			{src:"imagens/pag06/Bitmap5.png", id:"Bitmap5"},
+			{src:"imagens/pag06/Bitmap6.png", id:"Bitmap6"},
+			{src:"imagens/pag06/Bitmap7.png", id:"Bitmap7"},
+			{src:"imagens/pag06/Bitmap8.png", id:"Bitmap8"},
+			{src:"imagens/pag06/Bitmap9.png", id:"Bitmap9"},
+			{src:"imagens/pag06/FHCeducarparacrescerabrilcom.png", id:"FHCeducarparacrescerabrilcom"},
+			{src:"imagens/pag06/FlorestamFernandes.png", id:"FlorestamFernandes"},
+			{src:"imagens/pag06/fotodeabdias_do_nascimento.png", id:"fotodeabdias_do_nascimento"},
+			{src:"imagens/pag06/Jornalalvorada.png", id:"Jornalalvorada"},
+			{src:"imagens/pag06/Jornalnoticiasdeebano.png", id:"Jornalnoticiasdeebano"},
+			{src:"imagens/pag06/Jornalomutirão.png", id:"Jornalomutirão"},
+			{src:"imagens/pag06/Jornalonovohorizonte.png", id:"Jornalonovohorizonte"},
+			{src:"imagens/pag06/UNESCO.png", id:"UNESCO"}
+		];
+
+		var loader = new createjs.LoadQueue(false);
+		loader.addEventListener("fileload", handleFileLoad);
+		loader.addEventListener("complete", handleComplete);
+		loader.loadManifest(manifest);
+	}
+
+	function handleFileLoad(evt) {
+		if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+	}
+
+	function handleComplete() {
+		exportRoot = new lib.botao6NovoHTML();
+
+		stage = new createjs.Stage(canvas);
+		stage.addChild(exportRoot);
+		stage.update();
+		stage.enableMouseOver();
+
+		createjs.Ticker.setFPS(24);
+		createjs.Ticker.addEventListener("tick", stage);
+	}
+</script>
+
+</head>
+
+<body style="background-color:#D4D4D4">
+	<canvas id="canvas" width="974" height="640" style="background-color:#ffffff"></canvas>
+
+	<!-- Flash -->
+	<script>init();</script>
+
+	<!-- Lightbox -->
+	<div class="lightbox">
+		<!-- Pag06/01 -->
+		<a class="fancybox-button" id="page06_01_01" rel="fancybox-button" href="imagens/pag06/lightbox/pag01/pag06_01_01.jpg" title="Jornal 'O Clarim da Alvorada' (Foto: Divulgação)">
+		</a>
+
+		<a class="fancybox-button" id="page06_01_02" rel="fancybox-button" href="imagens/pag06/lightbox/pag01/pag06_01_02.jpg" title="Jornal 'O Novo Horizonte' (Foto: Divulgação)">
+		</a>
+
+		<a class="fancybox-button" id="page06_01_03" rel="fancybox-button" href="imagens/pag06/lightbox/pag01/pag06_01_03.jpg" title="Jornal 'Notíciias de Ébano' (Foto: Divulgação)">
+		</a>
+
+		<a class="fancybox-button" id="page06_01_04" rel="fancybox-button" href="imagens/pag06/lightbox/pag01/pag06_01_04.jpg" title="Jornal 'O Multirão' (Foto: Divulgação)">
+		</a>
+
+		<a class="fancybox-button" id="page06_01_05" rel="fancybox-button" href="imagens/pag06/lightbox/pag01/pag06_01_05.jpg" title="A UNESCO financiou pesquisas para tentar explicar a questão das relações raciais no Brasil (Imagem: Divulgação)">
+		</a>
+
+		<!-- Pag06/03 -->
+		<a class="fancybox-button" id="page06_03_01" rel="fancybox-button" href="imagens/pag06/lightbox/pag03/pag06_03_01.jpg" title="Abdias de Nascimento, criado do Teatro Experimental Negro (TNE) (Foto: Reprodução)">
+		</a>
+
+		<a class="fancybox-button" id="page06_03_02" rel="fancybox-button" href="imagens/pag06/lightbox/pag03/pag06_03_02.jpg" title="Arinda Serafim e Mariana Gonçalves, co-fundadoreas do TEN, ensaiando o papel da 'velha nativa' em 'O imperador Jones' de Eugene O'Neill, com estréia no Teatro Municipal (RJ), em 1945 (Foto: Reprodução)">
+		</a>
+
+		<a class="fancybox-button" id="page06_03_03" rel="fancybox-button" href="imagens/pag06/lightbox/pag03/pag06_03_03.jpg" title="Elenco da peça 'O Filho Pródigo', de Lúcio Cardoso. Teatro Ginástico (RJ). 1947 (Foto: Reprodução) ">
+
+		<a class="fancybox-button" id="page06_03_04" rel="fancybox-button" href="imagens/pag06/lightbox/pag03/pag06_03_04.jpg" title="Abdias Nascimento numa cena de Otelo, de Shakespeare, no Festival do 2º Aniversário do TEN. Teatro Regina (RJ). 1946 (Foto: Reprodução)">
+		</a>
+
+		<!-- Pag06/04 -->
+		<a class="fancybox-button" id="page06_04_01" rel="fancybox-button" href="imagens/pag06/lightbox/pag04/pag06_04_01.jpg" title="Afonso Arinos foi autor da Lei 1.390, que leva seu nome, transformando crime toda ação racista (Foto: Reprodução, Itamaraty)">
+		</a>
+
+		<!-- Pag04/05 -->
+		<a class="fancybox-button" id="page06_05_01" rel="fancybox-button" href="imagens/pag06/lightbox/pag05/pag06_05_01.jpg" title="Fernando Henrique Cardoso chegou a ser exilado, durante o período da ditadura militar no Brasil por denunciar as desigualdades raciais no país (Foto: Reprodução, Abril)">
+		</a>
+
+		<a class="fancybox-button" id="page06_05_02" rel="fancybox-button" href="imagens/pag06/lightbox/pag05/pag06_05_02.jpg" title="Florestan Fernandes foi exilado por denunciar crimes racistas (Foto: Reprodução)">
+		</a>
+	</div>
+</body>
+</html>

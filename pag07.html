@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cultura Afro-Brasileira</title>
+
+<script>
+	var canvas, stage, exportRoot;
+
+	function init() {
+		canvas = document.getElementById("canvas");
+		images = images||{};
+
+		var manifest = [
+			{src:"imagens/pag07/Bitmap1.png", id:"Bitmap1"},
+			{src:"imagens/pag07/Bitmap2.png", id:"Bitmap2"},
+			{src:"imagens/pag07/Bitmap3.png", id:"Bitmap3"},
+			{src:"imagens/pag07/Bitmap4.png", id:"Bitmap4"},
+			{src:"imagens/pag07/IIMarchaNacionalContraoGenocídiodoPovoNegrolevou.png", id:"IIMarchaNacionalContraoGenocídiodoPovoNegrolevou"},
+			{src:"imagens/pag07/MarshaHunt3.png", id:"MarshaHunt3"},
+			{src:"imagens/pag07/Milton_Nascimento_2008.png", id:"Milton_Nascimento_2008"},
+			{src:"imagens/pag07/MNULogo.png", id:"MNULogo"},
+			{src:"imagens/pag07/revistaebano.png", id:"revistaebano"}
+		];
+
+		var loader = new createjs.LoadQueue(false);
+		loader.addEventListener("fileload", handleFileLoad);
+		loader.addEventListener("complete", handleComplete);
+		loader.loadManifest(manifest);
+	}
+
+	function handleFileLoad(evt) {
+		if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+	}
+
+	function handleComplete() {
+		exportRoot = new lib.botao7NovoHTML();
+
+		stage = new createjs.Stage(canvas);
+		stage.addChild(exportRoot);
+		stage.update();
+		stage.enableMouseOver();
+
+		createjs.Ticker.setFPS(24);
+		createjs.Ticker.addEventListener("tick", stage);
+	}
+</script>
+
+</head>
+
+<body style="background-color:#D4D4D4">
+	<canvas id="canvas" width="974" height="640" style="background-color:#ffffff"></canvas>
+
+	<!-- Flash -->
+	<script>init();</script>
+
+	<!-- Lightbox -->
+	<div class="lightbox">
+		<!-- Pag07/01 -->
+		<a class="fancybox-button" id="page07_01_01" rel="fancybox-button" href="imagens/pag07/lightbox/pag01/pag07_01_01.jpg" title="Logomarca do Movimento Negro Unificado (MNU) (Imagem: Divulgação)">
+		</a>
+
+		<!-- Pag07/02 -->
+		<a class="fancybox-button" id="page07_02_01" rel="fancybox-button" href="imagens/pag07/lightbox/pag02/pag07_02_01.jpg" title="O movimento negro ganhou força com a Revista Ébano (Imagem: Divulgação)">
+		</a>
+
+		<!-- Pag07/03 -->
+		<a class="fancybox-button" id="page07_03_01" rel="fancybox-button" href="imagens/pag07/lightbox/pag03/pag07_03_01.jpg" title="Milton Nascimento é um dos responsáveis pela letra da música "Raça" que trata a luta do negro no Brasil desde o período da escravidão (Imagem: Reprodução)">
+		</a>
+
+		<!-- Pag07/04 -->
+		<a class="fancybox-button" id="page07_04_01" rel="fancybox-button" href="imagens/pag07/lightbox/pag04/pag07_04_01.jpg" title="A II Marcha Internacional contra o Genocídio do Povo Negro teve como tema 'A luta transnacional contra o Racismo, a Diáspora Negra contra o Genocídio' (Imagem: Divulgação)">
+		</a>
+	</div>
+</body>
+</html>

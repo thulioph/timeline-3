@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cultura Afro-Brasileira</title>
+
+<script>
+	var canvas, stage, exportRoot;
+
+	function init() {
+		canvas = document.getElementById("canvas");
+		images = images||{};
+
+		var manifest = [
+			{src:"imagens/pag04/AbolicionistaAntonioBentodeSouzaeCastrodomíniopúblico.png", id:"AbolicionistaAntonioBentodeSouzaeCastrodomíniopúblico"},
+			{src:"imagens/pag04/CartaLeiÁureaDomíniopúblico.png", id:"CartaLeiÁureaDomíniopúblico"},
+			{src:"imagens/pag04/castroalves.png", id:"castroalves"},
+			{src:"imagens/pag04/Detalhe_quadro_Auguste_François_Biard_A_abolição_da_escravatura_unilabedu.png", id:"Detalhe_quadro_Auguste_François_Biard_A_abolição_da_escravatura_unilabedu"},
+			{src:"imagens/pag04/EugenismoFrancisGaltondomíniopúblico.png", id:"EugenismoFrancisGaltondomíniopúblico"},
+			{src:"imagens/pag04/Joaquim_Nabuco__1902_reproducao_fonte_catracalivrecom.png", id:"Joaquim_Nabuco__1902_reproducao_fonte_catracalivrecom"},
+			{src:"imagens/pag04/joseDoPatrociniowikipedia.png", id:"joseDoPatrociniowikipedia"},
+			{src:"imagens/pag04/PrincesaIsabelÉdouardViénotDomíniopúblico.png", id:"PrincesaIsabelÉdouardViénotDomíniopúblico"}
+		];
+
+		var loader = new createjs.LoadQueue(false);
+		loader.addEventListener("fileload", handleFileLoad);
+		loader.addEventListener("complete", handleComplete);
+		loader.loadManifest(manifest);
+	}
+
+	function handleFileLoad(evt) {
+		if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+	}
+
+	function handleComplete() {
+		exportRoot = new lib.botao4NovoHTML();
+
+		stage = new createjs.Stage(canvas);
+		stage.addChild(exportRoot);
+		stage.update();
+		stage.enableMouseOver();
+
+		createjs.Ticker.setFPS(24);
+		createjs.Ticker.addEventListener("tick", stage);
+	}
+</script>
+
+</head>
+
+<body style="background-color:#D4D4D4">
+	<canvas id="canvas" width="974" height="640" style="background-color:#ffffff"></canvas>
+
+	<!-- Flash -->
+	<script>init();</script>
+
+	<!-- Lightbox -->
+	<div class="lightbox">
+		<!-- Pag04/01 -->
+		<a class="fancybox-button" id="page04_01_01" rel="fancybox-button" href="imagens/pag04/lightbox/pag01/pag04_01_01.jpg" title="A 'A abolição da escravatura' mostra a comemoração dos negros com a assinatura da Lei Áurea pela Princesa Isabel (Imagem: Reprodução, Auguste François Biard, óleo sobre tela)">
+		</a>
+
+		<!-- Pag04/02 -->
+		<a class="fancybox-button" id="page04_02_01" rel="fancybox-button" href="imagens/pag04/lightbox/pag02/pag04_02_01.jpg" title="Abolicionista, Antonio Bento de Souza e Castro (Foto: Reprodução)">
+		</a>
+
+		<a class="fancybox-button" id="page04_02_02" rel="fancybox-button" href="imagens/pag04/lightbox/pag02/pag04_02_02.jpg" title="Além de escritor, Castro Alves foi defensor do abolicionismo (Foto: Reprodução)">
+		</a>
+
+		<a class="fancybox-button" id="page04_02_03" rel="fancybox-button" href="imagens/pag04/lightbox/pag02/pag04_02_03.jpg" title="Joaquim Nabuco, abolicionista (Foto: Reprodução, Catraca Livre)">
+		</a>
+
+		<a class="fancybox-button" id="page04_02_04" rel="fancybox-button" href="imagens/pag04/lightbox/pag02/pag04_02_04.jpg" title="José do Patrocínio, abolicionista (Foto: Reprodução)">
+		</a>
+
+		<!-- Pag03/03 -->
+		<a class="fancybox-button" id="page04_03_01" rel="fancybox-button" href="imagens/pag04/lightbox/pag03/pag04_03_01.jpg" title="Princesa Isabel, decretou a Lei Áurea que exterminou a escravidão no Brasil (Imagem: Reprodução)">
+		</a>
+
+		<a class="fancybox-button" id="page04_03_02" rel="fancybox-button" href="imagens/pag04/lightbox/pag03/pag04_03_02.jpg" title="A Lei Áurea garantiu a liberdade aos escravos no Brasil (Imagem: divulgação)">
+		</a>
+
+		<!-- Pag04/04 -->
+		<a class="fancybox-button" id="page04_04_01" rel="fancybox-button" href="imagens/pag04/lightbox/pag04/pag04_04_01.jpg" title=" Francis Galton, autor do eugenismo. No Brasil os eugenistas procuraram tratar temas como educação higiênica e sanitária, a seleção de imigrantes, a educação sexual, o controle matrimonial e da reprodução humana e debates em torno da miscigenação, branqueamento e a regeneração racial. (Foto: Reprodução)">
+		</a>
+	</div>
+</body>
+</html>

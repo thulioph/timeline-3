@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cultura Afro-Brasileira</title>
+
+<script>
+	var canvas, stage, exportRoot;
+
+	function init() {
+		canvas = document.getElementById("canvas");
+		images = images||{};
+
+		var manifest = [
+			{src:"imagens/pag02/ACoveredLitterExibiçãodeumreidoCongosendotransportadoemumaliteiraporseusescravosFonteDODapperGrafiteAmsterdam1686.png", id:"ACoveredLitterExibiçãodeumreidoCongosendotransportadoemumaliteiraporseusescravosFonteDODapperGrafiteAmsterdam1686"},
+			{src:"imagens/pag02/angola.png", id:"angola"},
+			{src:"imagens/pag02/benguela.png", id:"benguela"},
+			{src:"imagens/pag02/Bitmap1.png", id:"Bitmap1"},
+			{src:"imagens/pag02/Bitmap2.png", id:"Bitmap2"},
+			{src:"imagens/pag02/Bitmap3.png", id:"Bitmap3"},
+			{src:"imagens/pag02/Bitmap4.png", id:"Bitmap4"},
+			{src:"imagens/pag02/Bitmap5.png", id:"Bitmap5"},
+			{src:"imagens/pag02/Bitmap6.png", id:"Bitmap6"},
+			{src:"imagens/pag02/Bitmap7.png", id:"Bitmap7"},
+			{src:"imagens/pag02/Bitmap8.png", id:"Bitmap8"},
+			{src:"imagens/pag02/Bitmap9.png", id:"Bitmap9"},
+			{src:"imagens/pag02/congo.png", id:"congo"},
+			{src:"imagens/pag02/LavragemdeouroemItacolomiMinasGeraisFonteRugendaslitogravuraRevistadeHistória.png", id:"LavragemdeouroemItacolomiMinasGeraisFonteRugendaslitogravuraRevistadeHistória"},
+			{src:"imagens/pag02/monjolo.png", id:"monjolo"},
+			{src:"imagens/pag02/MuitosnegrosmorriamduranteaviagemdepercursoentreÁfricaeAméricaFonteJMRogendaLicografia.png", id:"MuitosnegrosmorriamduranteaviagemdepercursoentreÁfricaeAméricaFonteJMRogendaLicografia"},
+			{src:"imagens/pag02/PlantaçãodealgodãonaGeórgia1820FonteCassellsIllustratedHistoryofEnglandLondonCassellPetterandGalpin1863vol3p307.png", id:"PlantaçãodealgodãonaGeórgia1820FonteCassellsIllustratedHistoryofEnglandLondonCassellPetterandGalpin1863vol3p307"}
+		];
+
+		var loader = new createjs.LoadQueue(false);
+		loader.addEventListener("fileload", handleFileLoad);
+		loader.addEventListener("complete", handleComplete);
+		loader.loadManifest(manifest);
+	}
+
+	function handleFileLoad(evt) {
+		if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+	}
+
+	function handleComplete() {
+		exportRoot = new lib.botao2NovoHTML();
+
+		stage = new createjs.Stage(canvas);
+		stage.addChild(exportRoot);
+		stage.update();
+		stage.enableMouseOver();
+
+		createjs.Ticker.setFPS(24);
+		createjs.Ticker.addEventListener("tick", stage);
+	}
+</script>
+
+</head>
+
+<body style="background-color:#D4D4D4">
+	<canvas id="canvas" width="974" height="640" style="background-color:#ffffff"></canvas>
+
+	<!-- Flash -->
+	<script>init();</script>
+
+	<!-- Lightbox -->
+	<div class="lightbox">
+		<!-- Pag02/01 -->
+		<a class="fancybox-button" id="page02_01_01" rel="fancybox-button" href="imagens/pag02/lightbox/pag01/pag02_01_01.jpg" title="A Covered Litter - Exibição de um rei do Congo sendo transportado em uma liteira por seus escravos (Foto: D O Dapper, grafite, Amsterdam, 1686)">
+		</a>
+
+		<a class="fancybox-button" id="page02_01_02" rel="fancybox-button" href="imagens/pag02/lightbox/pag01/pag02_01_02.jpg" title="Principais rotas do tráfico negreiro (Fonte - Secretaria de Educação do Paraná, reprodução)">
+		</a>
+
+		<a class="fancybox-button" id="page02_01_03" rel="fancybox-button" href="imagens/pag02/lightbox/pag01/pag02_01_03.jpg" title="Etnia angolana (Imagem: Rugendas, litogravura, Revista de História)">
+		</a>
+
+		<a class="fancybox-button" id="page02_01_04" rel="fancybox-button" href="imagens/pag02/lightbox/pag01/pag02_01_04.jpg" title="Etnia benguela (Imagem: Rugendas, litogravura, Revista de História)">
+		</a>
+
+		<a class="fancybox-button" id="page02_01_05" rel="fancybox-button" href="imagens/pag02/lightbox/pag01/pag02_01_05.jpg" title="Etnia congolenha (Imagem: Rugendas, litogravura, Revista de História)">
+		</a>
+
+		<a class="fancybox-button" id="page02_01_06" rel="fancybox-button" href="imagens/pag02/lightbox/pag01/pag02_01_06.jpg" title="Etnia monjolo (Imagem: Rugendas, litogravura, Revista de História)">
+		</a>
+
+		<!-- Pag02/02 -->
+		<a class="fancybox-button" id="page02_02_01" rel="fancybox-button" href="imagens/pag02/lightbox/pag02/pag02_02_01.jpg" title="Muitos negros morriam durante a viagem de percurso entre África e América (Fonte: J M Rogenda, Licografia)">
+		</a>
+
+		<!-- Pag02/03 -->
+		<a class="fancybox-button" id="page02_03_01" rel="fancybox-button" href="imagens/pag02/lightbox/pag03/pag02_03_01.jpg" title="Quantidade de negros trazidos para as colônias do 'Novo Mundo' através do tráfico de acordo com o período (Fonte: ALENCASTRO, L. F., 'O trato dos viventes', adaptação)">
+		</a>
+
+		<a class="fancybox-button" id="page02_03_02" rel="fancybox-button" href="imagens/pag02/lightbox/pag03/pag02_03_02.jpg" title="Lavragem de ouro em Itacolomi, Minas Gerais (Imagem: Rugendas, litogravura, Revista de História)">
+		</a>
+
+		<a class="fancybox-button" id="page02_03_03" rel="fancybox-button" href="imagens/pag02/lightbox/pag03/pag02_03_03.jpg" title="Plantação de algodão na Geórgia 1820 (Imagem: Cassell's Illustrated History of England, London Cassell, Petter, and Galpin, 1863, vol - 3, p. 307)">
+		</a>
+	</div>
+</body>
+</html>
