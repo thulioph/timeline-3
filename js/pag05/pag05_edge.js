@@ -3,10 +3,10 @@
 (function (compId) {
 
     "use strict";
-    var im='images/pag05/',
+    var im='images/',
         aud='media/',
         vid='media/',
-        js='js/pag05/',
+        js='js/',
         fonts = {
         },
         opts = {
@@ -57,14 +57,15 @@
                             id: 'imagem05_01_01',
                             display: 'none',
                             type: 'image',
-                            rect: ['422px', '245px', '530px', '230px', 'auto', 'auto'],
+                            rect: ['420px', '241px', '530px', '230px', 'auto', 'auto'],
+                            cursor: 'pointer',
                             fill: ["rgba(0,0,0,0)",im+"imagem05_01_01.png",'0px','0px']
                         },
                         {
                             id: 'texto05_01_02',
                             display: 'none',
                             type: 'text',
-                            rect: ['692px', '393px', '170px', '22px', 'auto', 'auto'],
+                            rect: ['690px', '389px', '170px', '22px', 'auto', 'auto'],
                             text: "Centro de Nova Friburgo em 1870.",
                             align: "justify",
                             font: ['Verdana, Geneva, sans-serif', [18, "px"], "rgba(153,0,0,1)", "400", "none solid rgb(153, 0, 0)", "normal", "break-word", ""],
@@ -74,14 +75,15 @@
                             id: 'imagem05_01_02',
                             display: 'none',
                             type: 'image',
-                            rect: ['24px', '271px', '401px', '280px', 'auto', 'auto'],
+                            rect: ['24px', '269px', '401px', '280px', 'auto', 'auto'],
+                            cursor: 'pointer',
                             fill: ["rgba(0,0,0,0)",im+"imagem05_01_02.png",'0px','0px']
                         },
                         {
                             id: 'texto05_01_03',
                             display: 'none',
                             type: 'text',
-                            rect: ['35px', '558px', '378px', '24px', 'auto', 'auto'],
+                            rect: ['35px', '555px', '378px', '24px', 'auto', 'auto'],
                             text: "Chegada da primeira leva de imigrantes alemães às margens do rio dos Sinos.",
                             align: "justify",
                             font: ['Verdana, Geneva, sans-serif', [18, "px"], "rgba(153,0,0,1)", "400", "none solid rgb(153, 0, 0)", "normal", "break-word", ""],
@@ -92,6 +94,7 @@
                             display: 'none',
                             type: 'image',
                             rect: ['372px', '489px', '548px', '120px', 'auto', 'auto'],
+                            cursor: 'pointer',
                             fill: ["rgba(0,0,0,0)",im+"imagem05_01_03.png",'0px','0px']
                         },
                         {
@@ -109,6 +112,7 @@
                             display: 'none',
                             type: 'rect',
                             rect: ['236px', '135px', '73px', '24px', 'auto', 'auto'],
+                            cursor: 'pointer',
                             opacity: '0',
                             fill: ["rgba(192,192,192,1)"],
                             stroke: [0,"rgb(0, 0, 0)","none"]
@@ -128,6 +132,7 @@
                             display: 'none',
                             type: 'image',
                             rect: ['641px', '158px', '310px', '329px', 'auto', 'auto'],
+                            cursor: 'pointer',
                             fill: ["rgba(0,0,0,0)",im+"imagem05_02_01.png",'0px','0px']
                         },
                         {
@@ -145,6 +150,7 @@
                             display: 'none',
                             type: 'image',
                             rect: ['238px', '240px', '510px', '310px', 'auto', 'auto'],
+                            cursor: 'pointer',
                             fill: ["rgba(0,0,0,0)",im+"imagem05_02_02.png",'0px','0px']
                         },
                         {
@@ -162,6 +168,7 @@
                             display: 'none',
                             type: 'image',
                             rect: ['31px', '301px', '210px', '166px', 'auto', 'auto'],
+                            cursor: 'pointer',
                             fill: ["rgba(0,0,0,0)",im+"imagem05_02_03.png",'0px','0px']
                         },
                         {
@@ -196,6 +203,7 @@
                             display: 'none',
                             type: 'image',
                             rect: ['35px', '335px', '280px', '190px', 'auto', 'auto'],
+                            cursor: 'pointer',
                             fill: ["rgba(0,0,0,0)",im+"imagem05_03_01.png",'0px','0px']
                         },
                         {
@@ -213,6 +221,7 @@
                             display: 'none',
                             type: 'image',
                             rect: ['357px', '335px', '240px', '190px', 'auto', 'auto'],
+                            cursor: 'pointer',
                             fill: ["rgba(0,0,0,0)",im+"imagem05_03_02.png",'0px','0px']
                         },
                         {
@@ -230,6 +239,7 @@
                             display: 'none',
                             type: 'image',
                             rect: ['639px', '330px', '290px', '200px', 'auto', 'auto'],
+                            cursor: 'pointer',
                             fill: ["rgba(0,0,0,0)",im+"imagem05_03_03.png",'0px','0px']
                         },
                         {
@@ -244,12 +254,14 @@
                         },
                         {
                             id: 'avancar',
+                            display: 'none',
                             type: 'image',
                             rect: ['936px', '45px', '20px', '41px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"avancar.png",'0px','0px']
                         },
                         {
                             id: 'voltar',
+                            display: 'none',
                             type: 'image',
                             rect: ['15px', '45px', '20px', '41px', 'auto', 'auto'],
                             fill: ["rgba(0,0,0,0)",im+"voltar.png",'0px','0px']
@@ -379,34 +391,64 @@
                             '985px'
                         ],
                         [
-                            "eid134",
-                            "display",
-                            0,
-                            0,
+                            "eid35",
+                            "opacity",
+                            2000,
+                            400,
                             "linear",
-                            "${imagem05_02_03}",
-                            'none',
-                            'none'
+                            "${imagem05_01_03}",
+                            '0.000000',
+                            '1'
                         ],
                         [
-                            "eid67",
-                            "display",
-                            5585,
-                            0,
+                            "eid36",
+                            "opacity",
+                            2400,
+                            400,
                             "linear",
-                            "${imagem05_02_03}",
-                            'none',
-                            'block'
+                            "${imagem05_01_03}",
+                            '1',
+                            '0.000000'
                         ],
                         [
-                            "eid68",
-                            "display",
-                            6380,
-                            0,
+                            "eid77",
+                            "left",
+                            7780,
+                            500,
                             "linear",
-                            "${imagem05_02_03}",
-                            'block',
-                            'none'
+                            "${texto05_01_01}",
+                            '-905px',
+                            '45px'
+                        ],
+                        [
+                            "eid78",
+                            "left",
+                            8280,
+                            100,
+                            "linear",
+                            "${texto05_01_01}",
+                            '45px',
+                            '35px'
+                        ],
+                        [
+                            "eid79",
+                            "left",
+                            11190,
+                            100,
+                            "linear",
+                            "${texto05_01_01}",
+                            '35px',
+                            '45px'
+                        ],
+                        [
+                            "eid80",
+                            "left",
+                            11290,
+                            500,
+                            "linear",
+                            "${texto05_01_01}",
+                            '45px',
+                            '-905px'
                         ],
                         [
                             "eid132",
@@ -439,34 +481,24 @@
                             'none'
                         ],
                         [
-                            "eid139",
-                            "display",
-                            0,
-                            0,
+                            "eid114",
+                            "opacity",
+                            8580,
+                            400,
                             "linear",
-                            "${texto05_03_02}",
-                            'none',
-                            'none'
+                            "${texto05_03_04}",
+                            '0.000000',
+                            '1'
                         ],
                         [
-                            "eid96",
-                            "display",
-                            9380,
-                            0,
+                            "eid115",
+                            "opacity",
+                            10575,
+                            400,
                             "linear",
-                            "${texto05_03_02}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid97",
-                            "display",
-                            10175,
-                            0,
-                            "linear",
-                            "${texto05_03_02}",
-                            'block',
-                            'none'
+                            "${texto05_03_04}",
+                            '1',
+                            '0.000000'
                         ],
                         [
                             "eid86",
@@ -609,46 +641,6 @@
                             'none'
                         ],
                         [
-                            "eid77",
-                            "left",
-                            7780,
-                            500,
-                            "linear",
-                            "${texto05_01_01}",
-                            '-905px',
-                            '45px'
-                        ],
-                        [
-                            "eid78",
-                            "left",
-                            8280,
-                            100,
-                            "linear",
-                            "${texto05_01_01}",
-                            '45px',
-                            '35px'
-                        ],
-                        [
-                            "eid79",
-                            "left",
-                            11190,
-                            100,
-                            "linear",
-                            "${texto05_01_01}",
-                            '35px',
-                            '45px'
-                        ],
-                        [
-                            "eid80",
-                            "left",
-                            11290,
-                            500,
-                            "linear",
-                            "${texto05_01_01}",
-                            '45px',
-                            '-905px'
-                        ],
-                        [
                             "eid57",
                             "opacity",
                             4790,
@@ -689,22 +681,22 @@
                             '0.000000'
                         ],
                         [
-                            "eid114",
+                            "eid73",
                             "opacity",
-                            8580,
+                            5585,
                             400,
                             "linear",
-                            "${texto05_03_04}",
+                            "${texto05_02_04}",
                             '0.000000',
                             '1'
                         ],
                         [
-                            "eid115",
+                            "eid74",
                             "opacity",
-                            10575,
+                            5985,
                             400,
                             "linear",
-                            "${texto05_03_04}",
+                            "${texto05_02_04}",
                             '1',
                             '0.000000'
                         ],
@@ -739,54 +731,34 @@
                             'none'
                         ],
                         [
-                            "eid138",
+                            "eid139",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${imagem05_03_03}",
+                            "${texto05_03_02}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid88",
+                            "eid96",
                             "display",
                             9380,
                             0,
                             "linear",
-                            "${imagem05_03_03}",
+                            "${texto05_03_02}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid89",
+                            "eid97",
                             "display",
                             10175,
                             0,
                             "linear",
-                            "${imagem05_03_03}",
+                            "${texto05_03_02}",
                             'block',
                             'none'
-                        ],
-                        [
-                            "eid35",
-                            "opacity",
-                            2000,
-                            400,
-                            "linear",
-                            "${imagem05_01_03}",
-                            '0.000000',
-                            '1'
-                        ],
-                        [
-                            "eid36",
-                            "opacity",
-                            2400,
-                            400,
-                            "linear",
-                            "${imagem05_01_03}",
-                            '1',
-                            '0.000000'
                         ],
                         [
                             "eid141",
@@ -815,6 +787,36 @@
                             0,
                             "linear",
                             "${texto05_03_03}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid143",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${texto05_03_04}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid112",
+                            "display",
+                            8580,
+                            0,
+                            "linear",
+                            "${texto05_03_04}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid113",
+                            "display",
+                            10970,
+                            0,
+                            "linear",
+                            "${texto05_03_04}",
                             'block',
                             'none'
                         ],
@@ -869,32 +871,32 @@
                             '0.000000'
                         ],
                         [
-                            "eid143",
+                            "eid125",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${texto05_03_04}",
+                            "${imagem05_01_02}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid112",
+                            "eid25",
                             "display",
-                            8580,
+                            1600,
                             0,
                             "linear",
-                            "${texto05_03_04}",
+                            "${imagem05_01_02}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid113",
+                            "eid26",
                             "display",
-                            10970,
+                            3195,
                             0,
                             "linear",
-                            "${texto05_03_04}",
+                            "${imagem05_01_02}",
                             'block',
                             'none'
                         ],
@@ -947,6 +949,36 @@
                             "${imagem05_03_01}",
                             '1',
                             '0.000000'
+                        ],
+                        [
+                            "eid126",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${texto05_01_03}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid29",
+                            "display",
+                            1600,
+                            0,
+                            "linear",
+                            "${texto05_01_03}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid30",
+                            "display",
+                            3195,
+                            0,
+                            "linear",
+                            "${texto05_01_03}",
+                            'block',
+                            'none'
                         ],
                         [
                             "eid116",
@@ -1019,6 +1051,36 @@
                             '-905px'
                         ],
                         [
+                            "eid138",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${imagem05_03_03}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid88",
+                            "display",
+                            9380,
+                            0,
+                            "linear",
+                            "${imagem05_03_03}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid89",
+                            "display",
+                            10175,
+                            0,
+                            "linear",
+                            "${imagem05_03_03}",
+                            'block',
+                            'none'
+                        ],
+                        [
                             "eid142",
                             "display",
                             0,
@@ -1049,82 +1111,62 @@
                             'none'
                         ],
                         [
-                            "eid106",
-                            "opacity",
-                            8980,
-                            400,
-                            "linear",
-                            "${texto05_03_03}",
-                            '0.000000',
-                            '1'
-                        ],
-                        [
-                            "eid107",
-                            "opacity",
-                            10180,
-                            400,
-                            "linear",
-                            "${texto05_03_03}",
-                            '1',
-                            '0.000000'
-                        ],
-                        [
-                            "eid130",
+                            "eid131",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${imagem05_02_01}",
+                            "${texto05_02_02}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid51",
+                            "eid55",
                             "display",
                             4790,
                             0,
                             "linear",
-                            "${imagem05_02_01}",
+                            "${texto05_02_02}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid52",
+                            "eid56",
                             "display",
                             7180,
                             0,
                             "linear",
-                            "${imagem05_02_01}",
+                            "${texto05_02_02}",
                             'block',
                             'none'
                         ],
                         [
-                            "eid140",
+                            "eid134",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${imagem05_03_02}",
+                            "${imagem05_02_03}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid100",
+                            "eid67",
                             "display",
-                            8980,
+                            5585,
                             0,
                             "linear",
-                            "${imagem05_03_02}",
+                            "${imagem05_02_03}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid101",
+                            "eid68",
                             "display",
-                            10575,
+                            6380,
                             0,
                             "linear",
-                            "${imagem05_03_02}",
+                            "${imagem05_02_03}",
                             'block',
                             'none'
                         ],
@@ -1149,32 +1191,32 @@
                             '0.000000'
                         ],
                         [
-                            "eid133",
+                            "eid146",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${texto05_02_03}",
+                            "${avancar}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid63",
+                            "eid147",
                             "display",
-                            5190,
+                            2400,
                             0,
                             "linear",
-                            "${texto05_02_03}",
+                            "${avancar}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid64",
+                            "eid149",
                             "display",
-                            6785,
+                            9780,
                             0,
                             "linear",
-                            "${texto05_02_03}",
+                            "${avancar}",
                             'block',
                             'none'
                         ],
@@ -1219,42 +1261,62 @@
                             '0.000000'
                         ],
                         [
-                            "eid1",
-                            "display",
-                            12445,
-                            0,
-                            "linear",
-                            "${borda}",
-                            'block',
-                            'none'
-                        ],
-                        [
-                            "eid125",
+                            "eid133",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${imagem05_01_02}",
+                            "${texto05_02_03}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid25",
+                            "eid63",
                             "display",
-                            1600,
+                            5190,
                             0,
                             "linear",
-                            "${imagem05_01_02}",
+                            "${texto05_02_03}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid26",
+                            "eid64",
                             "display",
-                            3195,
+                            6785,
                             0,
                             "linear",
-                            "${imagem05_01_02}",
+                            "${texto05_02_03}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid123",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${imagem05_01_01}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid17",
+                            "display",
+                            1200,
+                            0,
+                            "linear",
+                            "${imagem05_01_01}",
+                            'none',
+                            'block'
+                        ],
+                        [
+                            "eid18",
+                            "display",
+                            3590,
+                            0,
+                            "linear",
+                            "${imagem05_01_01}",
                             'block',
                             'none'
                         ],
@@ -1289,32 +1351,42 @@
                             'none'
                         ],
                         [
-                            "eid123",
+                            "eid1",
+                            "display",
+                            12445,
+                            0,
+                            "linear",
+                            "${borda}",
+                            'block',
+                            'none'
+                        ],
+                        [
+                            "eid145",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${imagem05_01_01}",
+                            "${voltar}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid17",
+                            "eid148",
                             "display",
-                            1200,
+                            5985,
                             0,
                             "linear",
-                            "${imagem05_01_01}",
+                            "${voltar}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid18",
+                            "eid150",
                             "display",
-                            3590,
+                            12445,
                             0,
                             "linear",
-                            "${imagem05_01_01}",
+                            "${voltar}",
                             'block',
                             'none'
                         ],
@@ -1359,32 +1431,32 @@
                             '0.000000'
                         ],
                         [
-                            "eid131",
+                            "eid130",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${texto05_02_02}",
+                            "${imagem05_02_01}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid55",
+                            "eid51",
                             "display",
                             4790,
                             0,
                             "linear",
-                            "${texto05_02_02}",
+                            "${imagem05_02_01}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid56",
+                            "eid52",
                             "display",
                             7180,
                             0,
                             "linear",
-                            "${texto05_02_02}",
+                            "${imagem05_02_01}",
                             'block',
                             'none'
                         ],
@@ -1439,32 +1511,32 @@
                             'none'
                         ],
                         [
-                            "eid126",
+                            "eid140",
                             "display",
                             0,
                             0,
                             "linear",
-                            "${texto05_01_03}",
+                            "${imagem05_03_02}",
                             'none',
                             'none'
                         ],
                         [
-                            "eid29",
+                            "eid100",
                             "display",
-                            1600,
+                            8980,
                             0,
                             "linear",
-                            "${texto05_01_03}",
+                            "${imagem05_03_02}",
                             'none',
                             'block'
                         ],
                         [
-                            "eid30",
+                            "eid101",
                             "display",
-                            3195,
+                            10575,
                             0,
                             "linear",
-                            "${texto05_01_03}",
+                            "${imagem05_03_02}",
                             'block',
                             'none'
                         ],
@@ -1489,22 +1561,22 @@
                             '0.000000'
                         ],
                         [
-                            "eid73",
+                            "eid106",
                             "opacity",
-                            5585,
+                            8980,
                             400,
                             "linear",
-                            "${texto05_02_04}",
+                            "${texto05_03_03}",
                             '0.000000',
                             '1'
                         ],
                         [
-                            "eid74",
+                            "eid107",
                             "opacity",
-                            5985,
+                            10180,
                             400,
                             "linear",
-                            "${texto05_02_04}",
+                            "${texto05_03_03}",
                             '1',
                             '0.000000'
                         ]
@@ -1521,26 +1593,27 @@
                 content: {
                     dom: [
                         {
-                            type: 'text',
-                            rect: ['0px', '0px', '907px', '226px', 'auto', 'auto'],
-                            text: 'Segundo Seyferth (2002) , o principal objetivo da imigração europeia ocorrida no Brasil, a partir do século XIX, era buscar o branqueamento da população e eliminar os sinais da cultura indígena e negra. Os primeiros imigrantes trazidos foram os suíços que fundaram, em 1819, a Colônia de Nova Friburgo, no Rio de Janeiro. Logo após a independência, em 1824, germânicos são agenciados pelo governo e vão implantar, no Rio Grande do Sul, a colônia de São Leopoldo. Radicaram-se, ainda, em Minas Gerais (Teófilo Otoni e Juiz de Fora), e no Espírito Santo (Santa Teresa).',
-                            id: 'Text4Copy',
+                            rect: ['0px', '0px', '902px', '226px', 'auto', 'auto'],
                             textStyle: ['', '', '27px', ''],
+                            font: ['Verdana, Geneva, sans-serif', [20, 'px'], 'rgba(53,53,53,1.00)', '400', 'none solid rgb(46, 112, 159)', 'normal', 'break-word', ''],
+                            id: 'Text4Copy',
+                            text: 'Segundo Seyferth (2002) , o principal objetivo da imigração europeia ocorrida no Brasil, a partir do século XIX, era buscar o branqueamento da população e eliminar os sinais da cultura indígena e negra. Os primeiros imigrantes trazidos foram os suíços que fundaram, em 1819, a Colônia de Nova Friburgo, no Rio de Janeiro. Logo após a independência, em 1824, germânicos são agenciados pelo governo e vão implantar, no Rio Grande do Sul, a colônia de São Leopoldo. Radicaram-se, ainda, em Minas Gerais (Teófilo Otoni e Juiz de Fora), e no Espírito Santo (Santa Teresa).',
                             align: 'justify',
-                            font: ['Verdana, Geneva, sans-serif', [20, 'px'], 'rgba(53,53,53,1.00)', '400', 'none solid rgb(46, 112, 159)', 'normal', 'break-word', '']
+                            type: 'text'
                         },
                         {
-                            type: 'text',
                             rect: ['260px', '-2px', '12px', '18px', 'auto', 'auto'],
+                            font: ['Verdana, Geneva, sans-serif', [15, 'px'], 'rgba(153,0,0,1.00)', '400', 'none solid rgb(53, 53, 53)', 'normal', 'break-word', ''],
                             id: '_1',
                             text: '1',
                             align: 'justify',
-                            font: ['Verdana, Geneva, sans-serif', [15, 'px'], 'rgba(153,0,0,1.00)', '400', 'none solid rgb(53, 53, 53)', 'normal', 'break-word', '']
+                            type: 'text'
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            rect: [null, null, '887px', '121px']
+                            isStage: 'true',
+                            rect: [undefined, undefined, '887px', '121px']
                         }
                     }
                 },
@@ -1556,5 +1629,5 @@
 
     AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 
-    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("js/pag05/pag05_edgeActions.js");
+    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("botao05_edgeActions.js");
 })("EDGE-10652648");
