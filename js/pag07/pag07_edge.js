@@ -3,10 +3,10 @@
 (function (compId) {
 
     "use strict";
-    var im='images/',
+    var im='images/pag07/',
         aud='media/',
         vid='media/',
-        js='js/',
+        js='js/pag07/',
         fonts = {
             'LithosPro-Black': '@font-face {    font-family: \'LithosPro-Black\';    src: url(\'font/LithosPro-Black.eot\'), url(\'font/LithosPro-Black.ttf\') format(\'truetype\'), url(\'font/LithosPro-Black.otf\'), url(\'font/LithosPro-Black.woff\');    font-weight: normal;    font-style: normal;}',
             'MS-Reference-Sans-Serif': '@font-face {    font-family: \'MS-Reference-Sans-Serif\';    src: url(\'font/REFSAN.eot\'), url(\'font/REFSAN.ttf\') format(\'truetype\'), url(\'font/REFSAN.otf\'), url(\'font/REFSAN.woff\');    font-weight: normal;    font-style: normal;}'        },
@@ -2065,5 +2065,5 @@
 
     AdobeEdge.registerCompositionDefn(compId, symbols, fonts, scripts, resources, opts);
 
-    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("botao07_edgeActions.js");
+    if (!window.edge_authoring_mode) AdobeEdge.getComposition(compId).load("js/pag07/pag07_edgeActions.js");
 })("EDGE-21969087");
