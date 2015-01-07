@@ -947,7 +947,7 @@ p {
   .content figure {
     text-align: center; }
   .content p {
-    font-size: 1.8em;
+    font-size: 18px;
     text-align: left;
     color: #333333;
     line-height: 1.4em;
@@ -1012,7 +1012,7 @@ p {
   text-transform: uppercase;
   font-family: "LithosPro850"; }
 .page-internal p {
-  font-size: 1.5em; }
+  font-size: 18px; }
 .page-internal span {
   color: #990000; }
 .page-internal a {
